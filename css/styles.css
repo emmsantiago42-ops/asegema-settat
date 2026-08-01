@@ -666,25 +666,154 @@ footer.site-footer,
     background-color: #f5c038 !important;
 }
 
-/* Responsivo para móviles */
-@media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column !important;
-        gap: 30px !important;
-    }
-}
+/* ==========================================================================
+   RESPONSIVE OPTIMIZADO (TABLETAS Y TELÉFONOS)
+   ========================================================================== */
 
-/* Adaptación Responsive */
-@media (max-width: 768px) {
+/* --- TABLETAS (Pantallas < 992px) --- */
+@media screen and (max-width: 992px) {
+    /* Ajustes generales del Header */
+    .top-header-bar {
+        clip-path: none; /* Elimina la curva diagonal si aprieta los botones */
+        height: auto;
+    }
+    
+    .top-container {
+        justify-content: center;
+        padding: 5px 10px;
+    }
+
+    .main-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    /* Hero */
+    .hero-container {
+        margin-left: 0;
+        padding: 60px 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.3rem;
+    }
+
+    /* Mot du Président */
+    .quote-card {
+        margin: 20px 15px;
+        padding: 20px;
+    }
+
     .quote-content {
         flex-direction: column;
-        align-items: flex-start;
+        margin: 15px 0;
+        gap: 20px;
     }
 
     .president-badge {
         min-width: 100%;
         width: 100%;
-        box-sizing: border-box;
+        border-radius: 20px; /* Cambia a borde curvo uniforme */
+    }
+
+    /* Footer */
+    .footer-container {
+        flex-direction: column;
+        gap: 30px;
     }
 }
 
+/* --- TELÉFONOS (Pantallas < 768px) --- */
+@media screen and (max-width: 768px) {
+    
+    /* 1. Prevenir scroll horizontal accidental */
+    html, body {
+        overflow-x: hidden;
+    }
+
+    /* 2. Menú de Navegación */
+    .nav-menu ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-menu ul li a {
+        font-size: 0.75rem;
+        padding: 8px 10px;
+        border: none !important; /* Quita los bordes verticales apretados */
+    }
+
+    /* 3. Hero / Sección Principal */
+    .hero-section {
+        min-height: auto;
+        padding: 40px 0;
+        background-position: center; /* Centra la imagen de fondo */
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
+
+    .hero-content h2 {
+        font-size: 1.1rem;
+    }
+
+    .hero-content p {
+        font-size: 0.95rem !important; /* Sobrescribe los 30px del CSS base */
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .btn-primary, .btn-secondary {
+        text-align: center;
+        width: 100%;
+    }
+
+    /* 4. Mot du Président */
+    .president-badge {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+        border-right: none;
+        border-bottom: 4px solid #f5c038;
+    }
+
+    .badge-info {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .quote-message {
+        font-size: 0.95rem;
+    }
+
+    /* 5. Cifras / Estadísticas */
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px 10px;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    .stat-label {
+        font-size: 0.8rem;
+    }
+}
+
+/* --- TELÉFONOS PEQUEÑOS (Pantallas < 480px) --- */
+@media screen and (max-width: 480px) {
+    .logo h1 {
+        font-size: 1.6rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr; /* 1 columna en teléfonos muy pequeños */
+    }
+}
