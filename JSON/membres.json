@@ -1,0 +1,230 @@
+[
+  {
+    "id": 1,
+    "nombre": "Alicia Gabriela Nchama",
+    "apellidos": "Nve Edu",
+    "facultad": "FEG"
+  },
+  {
+    "id": 2,
+    "nombre": "Anna María",
+    "apellidos": "Angono",
+    "facultad": "FEG"
+  },
+  {
+    "id": 3,
+    "nombre": "Arsenia Eyang",
+    "apellidos": "Abeso Mokuy",
+    "facultad": "FEG"
+  },
+  {
+    "id": 4,
+    "nombre": "Agustina Nchama",
+    "apellidos": "Bosobobo Momesi",
+    "facultad": "FEG"
+  },
+  {
+    "id": 5,
+    "nombre": "Catalina bisesa",
+    "apellidos": "Esono oyana",
+    "facultad": "FSJP"
+  },
+  {
+    "id": 6,
+    "nombre": "Catalina Nchama",
+    "apellidos": "Obama Mbang",
+    "facultad": "FEG"
+  },
+  {
+    "id": 7,
+    "nombre": "Davinia Genoveva",
+    "apellidos": "Ebona Mikue",
+    "facultad": "FEG"
+  },
+  {
+    "id": 8,
+    "nombre": "Deogracias Nzamio",
+    "apellidos": "Esono Benga",
+    "facultad": "FEG"
+  },
+  {
+    "id": 9,
+    "nombre": "Diamantino",
+    "apellidos": "Motobe Binohari",
+    "facultad": "FST"
+  },
+  {
+    "id": 10,
+    "nombre": "Domingo Miguel Eló",
+    "apellidos": "Nguema Oyana",
+    "facultad": "ENCG"
+  },
+  {
+    "id": 11,
+    "nombre": "Emmanuel Santiago Abaga",
+    "apellidos": "Obama Mangue",
+    "facultad": "FST"
+  },
+  {
+    "id": 12,
+    "nombre": "Faustino Esono",
+    "apellidos": "NZE MEDJA",
+    "facultad": "FEG"
+  },
+  {
+    "id": 13,
+    "nombre": "Felipe Nkogo",
+    "apellidos": "Nzé Eyenga",
+    "facultad": "FEG"
+  },
+  {
+    "id": 14,
+    "nombre": "Filiberta Ines",
+    "apellidos": "Riquito Mayebe",
+    "facultad": "FST"
+  },
+  {
+    "id": 15,
+    "nombre": "Frida Montserrat",
+    "apellidos": "Ndong Edeguedegue",
+    "facultad": "FEG"
+  },
+  {
+    "id": 16,
+    "nombre": "Guillermo",
+    "apellidos": "Bueke Belope",
+    "facultad": "École Mohammed VI BTP"
+  },
+  {
+    "id": 17,
+    "nombre": "Heriberto Ntugu",
+    "apellidos": "Mba Nchama",
+    "facultad": "FEG"
+  },
+  {
+    "id": 18,
+    "nombre": "Inmaculada rosalina Abogo",
+    "apellidos": "Nsue Mayè",
+    "facultad": "FEG"
+  },
+  {
+    "id": 19,
+    "nombre": "Ivan Salvador",
+    "apellidos": "RICHARDS",
+    "facultad": "FST"
+  },
+  {
+    "id": 20,
+    "nombre": "Jesus Antonio",
+    "apellidos": "MACHIMBO",
+    "facultad": "FSJP"
+  },
+  {
+    "id": 21,
+    "nombre": "Juan Mariano Nze",
+    "apellidos": "Olo Bindang",
+    "facultad": "FEG"
+  },
+  {
+    "id": 22,
+    "nombre": "Juana Bikie",
+    "apellidos": "Nguema obono",
+    "facultad": "FEG"
+  },
+  {
+    "id": 23,
+    "nombre": "Juan Francisco",
+    "apellidos": "Nsue Monvora",
+    "facultad": "Ecole mohamed vi BTP"
+  },
+  {
+    "id": 24,
+    "nombre": "Juliana Nzang",
+    "apellidos": "Mbo Nsuru",
+    "facultad": "FEG"
+  },
+  {
+    "id": 25,
+    "nombre": "Ladislao Luis",
+    "apellidos": "Enote Mango",
+    "facultad": "FEG"
+  },
+  {
+    "id": 26,
+    "nombre": "María Belén Alene",
+    "apellidos": "Malale Asangono",
+    "facultad": "FSJP"
+  },
+  {
+    "id": 27,
+    "nombre": "Micaela Mangue",
+    "apellidos": "Mba",
+    "facultad": "FST"
+  },
+  {
+    "id": 28,
+    "nombre": "Miguel Nsue",
+    "apellidos": "Asumu Avomo",
+    "facultad": "FEG"
+  },
+  {
+    "id": 29,
+    "nombre": "Mónica",
+    "apellidos": "ADJABA MITOGO",
+    "facultad": "FSJP"
+  },
+  {
+    "id": 30,
+    "nombre": "Monica Montserrat Bang",
+    "apellidos": "Ndong Eyui",
+    "facultad": "FEG"
+  },
+  {
+    "id": 31,
+    "nombre": "Roberto Nzang",
+    "apellidos": "Ngua Ebeñe",
+    "facultad": "FEG"
+  },
+  {
+    "id": 32,
+    "nombre": "Rosario Ayecaba",
+    "apellidos": "Mbomio Oye",
+    "facultad": "FSJP"
+  },
+  {
+    "id": 33,
+    "nombre": "Ruth",
+    "apellidos": "Estévez García",
+    "facultad": "I3S"
+  },
+  {
+    "id": 34,
+    "nombre": "Santiago Diosdado Ondo",
+    "apellidos": "Evuy Nchama",
+    "facultad": "ENCG"
+  },
+  {
+    "id": 35,
+    "nombre": "Teresa Mba",
+    "apellidos": "Bibang Maye",
+    "facultad": "FEG"
+  },
+  {
+    "id": 36,
+    "nombre": "Victor Milam",
+    "apellidos": "Eworo Nzang",
+    "facultad": "FEG"
+  },
+  {
+    "id": 37,
+    "nombre": "Alejandro Jesus",
+    "apellidos": "Bicoro Eyang",
+    "facultad": "FST"
+  },
+  {
+    "id": 38,
+    "nombre": "Jose Ruben Nvono",
+    "apellidos": "Nkogo Nchama",
+    "facultad": "FEG"
+  }
+]

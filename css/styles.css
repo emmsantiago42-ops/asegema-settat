@@ -1,0 +1,690 @@
+/* Reset básico para evitar espacios blancos indeseados */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ==========================================
+   HEADER ESTILO MODELO (CURVO + VERDE)
+   ========================================== */
+.site-header {
+    width: 100%;
+    position: relative;
+    top: 0;
+    z-index: 1000;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* 1. Barra Superior (Verde con la diagonal curva) */
+.top-header-bar {
+    background: linear-gradient(135deg, #142f0a 0%, #19641c 100%);
+    height: 45px;
+    width: 100%;
+    position: relative;
+    /* Crear el corte diagonal/curvo característico del modelo a la izquierda */
+    clip-path: polygon(12% 0, 100% 0, 100% 100%, 0% 100%);
+    margin-left: auto;
+}
+
+.top-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 20px;
+}
+
+/* Enlaces del menú superior */
+.nav-menu ul {
+    display: flex;
+    list-style: none;
+    gap: 0;
+}
+
+.nav-menu ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 12px 18px;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.nav-menu ul li:first-child a {
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.nav-menu ul li a:hover,
+.nav-menu ul li a.active {
+    background-color: rgba(245, 192, 56, 0.25);
+    color: #f5c038; /* Amarillo de acento */
+}
+
+/* 2. Barra Inferior del Logo */
+.main-header-bar {
+    background-color: #ffffff;
+    padding: 15px 0;
+}
+
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    text-decoration: none;
+}
+
+.logo h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #142f0a;
+    letter-spacing: -1px;
+}
+
+.logo h1 span {
+    color: #19641c;
+    font-weight: 400;
+}
+
+.header-extra .tagline {
+    font-size: 0.85rem;
+    color: #666666;
+    font-style: italic;
+}
+
+/* ==========================================
+   SECCIÓN HERO / INICIO (CON IMAGEN DE FONDO)
+   ========================================== */
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    min-height: 85vh;
+    /* Ajusta la ruta a tu archivo si es necesario */
+    background-image: url('../images/ASEGEMA\ Settat.jpeg');
+    background-repeat: no-repeat;
+    /* Ubicamos la imagen alineada a la derecha y centrada verticalmente */
+    background-position: right 5% center;
+    /* Ajustamos el tamaño para que el logo no se agigante */
+    background-size: contain; 
+    background-color: #0f2407; /* Fondo verde oscuro de respaldo */
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+/* Capa de contraste sobre la imagen (Oscurece suavemente para leer el texto) */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Muy oscuro a la izquierda para leer el texto; más claro a la derecha para ver el logo */
+    background: linear-gradient(
+        to right, 
+        rgba(15, 36, 7, 0.95) 0%, 
+        rgba(15, 36, 7, 0.85) 45%, 
+        rgba(15, 36, 7, 0.35) 100%
+    );
+    z-index: 1;
+}
+
+/* Contenedor del contenido sobre el overlay */
+.hero-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1200px;
+    margin-left: 50px;
+    padding: 40px 20px;
+}
+
+.hero-content {
+    max-width: 750px; /* Un poco más ancho para dar respiro al texto */
+}
+
+.hero-content p{
+    font-size: 30px;
+}
+
+/* Botón VER PRESENTACIÓN */
+.btn-play {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+
+.play-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    font-size: 0.75rem;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.icon-avatar {
+    width: 60px; /* Ancho del icono */
+    height: 60px; /* Alto del icono */
+    border-radius: 50%; /* Lo hace completamente redondo */
+    overflow: hidden; /* Corta los bordes sobrantes */
+    border: 2px solid #19641c; /* Borde decorativo opcional */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen al círculo sin deformarla */
+}
+
+.btn-play:hover .play-icon {
+    transform: scale(1.1);
+    background: #f5c038;
+    border-color: #f5c038;
+    color: #142f0a;
+}
+
+/* Títulos y Párrafos */
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 12px;
+    color: #ffffff;
+}
+
+.hero-content h1 span {
+    color: #f5c038; /* Amarillo dorado de acento */
+}
+
+.hero-content h2 {
+    font-size: 1.35rem;
+    font-weight: 400;
+    margin-bottom: 25px;
+    color: #e2ede2;
+}
+
+.hero-content p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #f0f5f0;
+}
+
+/* Botones Inferiores */
+.hero-buttons {
+    display: flex;
+    gap: 18px;
+    margin-top: 30px;
+}
+
+.btn-primary {
+    background-color: #f5c038;
+    color: #142f0a;
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 15px rgba(245, 192, 56, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    background-color: #e0ac2b;
+}
+
+.btn-secondary {
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    padding: 10px 28px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #ffffff;
+    color: #142f0a;
+    transform: translateY(-2px);
+}
+/* ==========================================
+   SECCIÓN MOT DU PRÉSIDENT (ESPACIOS LATERALES + BOTÓN)
+   ========================================== */
+
+#mot-president {
+    padding: 30px 0; 
+    width: 100%;
+}
+
+/* Reducimos el ancho máximo para ajustar los márgenes laterales */
+.quote-card {
+    position: relative;
+    background: linear-gradient(135deg, #eaf2ea 0%, #e4efe4 50%, #bed1bf 100%);
+    border-radius: 20px;
+    padding: 25px 30px; /* Reducido relleno lateral a 30px */
+    border: 1px solid rgba(25, 100, 28, 0.15);
+    box-shadow: 0 10px 25px rgba(20, 47, 10, 0.08);
+    
+    /* CONTROL DE ESPACIOS LATERALES: ajusta el ancho total */
+    max-width: 1500px; /* Al bajar este valor, se reducen los espacios muertos a los lados */
+    margin: 50px auto;
+}
+
+.section-title {
+    color: #f5c038;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.quote-content {
+    margin: 30px;
+    display: flex;
+    align-items: center;
+    gap: 25px; /* Ajustamos el espacio entre el badge del presidente y el texto */
+}
+
+/* Bloque del Presidente */
+.president-badge {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #142f0a 0%, #19641c 100%);
+    border-radius: 80px 20px 20px 80px;
+    padding: 10px 20px 10px 10px;
+    min-width: 380px;
+    border-right: 6px solid #f5c038;
+    flex-shrink: 0;
+}
+
+.photo-wrapper img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ffffff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.badge-info {
+    margin-left: 15px;
+    color: #ffffff;
+}
+
+.badge-info h3 {
+    font-size: 1.25rem;
+    margin: 0 0 5px 0;
+    font-weight: 700;
+}
+
+.badge-info p {
+    font-size: 0.85rem;
+    margin: 0;
+    opacity: 0.9;
+}
+
+/* Texto de la Cita */
+.quote-text-block {
+    flex: 1;
+}
+
+.quote-message {
+    color: #142f0a;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+/* RESTAURACIÓN DEL BOTÓN LIRE PLUS (Botón amarillo 3D) */
+.btn-read-more {
+    display: inline-block !important;
+    background-color: #f5c038 !important;
+    color: #142f0a !important;
+    padding: 10px 22px !important;
+    border-radius: 8px !important;
+    text-decoration: none !important;
+    font-weight: 700 !important;
+    font-size: 0.9rem !important;
+    box-shadow: 0 4px 0 #d4a222 !important;
+    transition: transform 0.2s, background-color 0.2s !important;
+}
+
+.btn-read-more:hover {
+    transform: translateY(-2px) !important;
+    background-color: #e0ac2b !important;
+}
+
+/* Comillas flotantes */
+.quote-icon {
+    position: absolute;
+    font-size: 4.5rem;
+    line-height: 1;
+    font-family: Georgia, serif;
+    pointer-events: none;
+}
+
+.top-quote {
+    top: 5px;
+    left: 15px;
+    color: #19641c;
+    opacity: 0.15;
+}
+
+.bottom-quote {
+    bottom: -10px;
+    right: 20px;
+    color: #f5c038;
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+    .quote-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .president-badge {
+        min-width: 100%;
+        width: 100%;
+    }
+}
+
+/* ==========================================================================
+   SECCIÓN: ASEGEMA EN CIFRAS
+   ========================================================================== */
+
+.stats-section {
+    background-color: #8ea590; /* Verde institucional */
+    padding: 60px 20px;
+    color: #335f35;
+}
+
+.stats-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Título lateral (Estilo FST) */
+.stats-header {
+    flex: 0 0 250px;
+}
+
+.stats-header h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #142f0a;
+    text-transform: uppercase;
+}
+
+.stats-header h2 span {
+    color: #f5c038; /* Dorado institucional */
+    font-size: 2rem;
+}
+
+/* Grid de los contadores */
+.stats-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 35px 20px;
+}
+
+/* Tarjeta individual de estadística */
+.stat-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.stat-number {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #f5c038; /* Amarillo/Dorado destacado */
+    line-height: 1;
+    margin-bottom: 6px;
+}
+
+.stat-label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #142f0a;
+    line-height: 1.3;
+}
+
+/* ==========================================================================
+   RESPONSIVE MÓVIL Y TABLET
+   ========================================================================== */
+
+@media (max-width: 992px) {
+    .stats-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .stats-header {
+        flex: auto;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+    }
+
+    .stat-card {
+        align-items: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas pequeñas */
+        gap: 25px 15px;
+    }
+
+    .stat-number {
+        font-size: 2.2rem;
+    }
+
+    .stat-label {
+        font-size: 0.85rem;
+    }
+}
+
+/* ==========================================
+   FOOTER COMPLETO (IZQUIERDA + DERECHA)
+   ========================================== */
+
+footer.site-footer, 
+.site-footer {
+    background: #142f0a !important; /* Verde oscuro */
+    color: #ffffff !important;
+    padding: 50px 0 30px 0 !important;
+    border-top: 4px solid #f5c038 !important; /* Borde amarillo */
+    font-family: sans-serif;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+    gap: 40px !important;
+}
+
+/* --- LADO IZQUIERDO (LOGO, SOBRE NOSOTROS Y COPYRIGHT) --- */
+.footer-left {
+    flex: 1;
+    max-width: 450px;
+    line-height: 29px;
+}
+
+.footer-logo h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #ffffff !important;
+    margin-bottom: 12px;
+}
+
+.footer-logo h2 span {
+    color: #f5c038 !important;
+}
+
+.footer-about {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #d0e0d0 !important;
+    margin-bottom: 20px;
+}
+
+.copyright {
+    font-size: 0.85rem;
+    color: #8fae8f !important; /* Color verde claro legible para el copyright */
+    font-weight: 500;
+}
+
+/* --- LADO DERECHO (CONTACTO Y REDES) --- */
+.footer-right {
+    flex: 1;
+    max-width: 400px;
+}
+
+.footer-right h3 {
+    font-size: 1.5rem;
+    color: #ffffff !important;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+.footer-right h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 3px;
+    background-color: #f5c038;
+}
+
+.contact-info {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 15px !important;
+    margin-bottom: 25px !important;
+}
+
+.contact-item {
+    display: flex !important;
+    align-items: center !important;
+    gap: 15px !important;
+}
+
+/* Caja amarilla para los iconos */
+.icon-box {
+    width: 38px !important;
+    height: 38px !important;
+    background-color: #f5c038 !important;
+    color: #142f0a !important;
+    border-radius: 6px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 1rem !important;
+    flex-shrink: 0;
+}
+
+.contact-item span {
+    color: #ffffff !important;
+    font-size: 0.95rem;
+}
+
+/* Botones de Redes Sociales */
+.social-links {
+    display: flex !important;
+    gap: 12px !important;
+}
+
+.social-icon {
+    width: 40px !important;
+    height: 40px !important;
+    background-color: #ffffff !important;
+    color: #142f0a !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-decoration: none !important;
+    font-size: 1.1rem !important;
+    transition: transform 0.3s ease, background-color 0.3s ease !important;
+}
+
+.social-icon:hover {
+    transform: translateY(-4px) !important;
+    background-color: #f5c038 !important;
+}
+
+/* Responsivo para móviles */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column !important;
+        gap: 30px !important;
+    }
+}
+
+/* Adaptación Responsive */
+@media (max-width: 768px) {
+    .quote-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .president-badge {
+        min-width: 100%;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+

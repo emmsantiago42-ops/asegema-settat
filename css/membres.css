@@ -1,0 +1,186 @@
+/* Layout Principal */
+.presentation-section {
+    padding: 50px 20px;
+    background-color: #bed1bf;
+    color: #2b2b2b;
+}
+
+.presentation-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title .subtitle {
+    color: #c99831;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.section-title h2 {
+    color: #1a4329;
+    font-size: 2.2rem;
+    margin-top: 5px;
+}
+
+.section-title .line {
+    width: 70px;
+    height: 3px;
+    background-color: #c99831;
+    margin: 12px auto 0;
+}
+
+/* Bloques Flexibles con límite de altura para imágenes */
+.presentation-block {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin: 40px 0;
+}
+
+.presentation-block.reverse {
+    flex-direction: row-reverse;
+}
+
+.block-text {
+    flex: 1;
+}
+
+.block-text h3 {
+    font-size: 1.4rem;
+    color: #1a4329;
+    margin-bottom: 15px;
+    border-left: 4px solid #c99831;
+    padding-left: 10px;
+}
+
+.block-text p {
+    line-height: 1.7;
+    margin-bottom: 12px;
+    color: #4a4a4a;
+}
+
+/* Arreglo de Contenedores de Imágenes */
+.block-image {
+    flex: 1;
+    min-height: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #e2e8f0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.block-image img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Lista de Facultades */
+.faculties-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 15px;
+}
+
+.faculties-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid #e9ecef;
+    font-size: 0.95rem;
+}
+
+/* Separadores de sección */
+.separator {
+    border: 0;
+    height: 1px;
+    background: #e5e7eb;
+    margin: 45px 0;
+}
+
+/* Corrección de las Tarjetas de Objetivos e Iconos */
+.block-title-center {
+    font-size: 1.4rem;
+    color: #1a4329;
+    margin-bottom: 25px;
+}
+
+.objectives-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.obj-card {
+    background: #ffffff;
+    padding: 25px 20px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    border-top: 4px solid #1a4329;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    text-align: left;
+}
+
+/* Corrección del emoji truncado */
+.obj-icon-wrapper {
+    font-size: 1.8rem;
+    line-height: 1;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.obj-card h4 {
+    color: #1a4329;
+    font-size: 1.05rem;
+    margin-bottom: 8px;
+}
+
+.obj-card p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Cuadro de Logros Deportivos */
+.sports-achievements {
+    background-color: #f0fdf4;
+    border-left: 4px solid #16a34a;
+    padding: 16px 20px;
+    border-radius: 6px;
+    margin-top: 20px;
+}
+
+.sports-achievements h4 {
+    color: #15803d;
+    font-size: 1.05rem;
+    margin-bottom: 10px;
+}
+
+.sports-achievements ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.sports-achievements li {
+    padding: 4px 0;
+    font-size: 0.92rem;
+    color: #374151;
+}
+
+/* Adaptación para pantallas pequeñas */
+@media (max-width: 850px) {
+    .presentation-block, .presentation-block.reverse {
+        flex-direction: column;
+    }
+    .objectives-grid {
+        grid-template-columns: 1fr;
+    }
+    .block-image {
+        width: 100%;
+    }
+}

@@ -1,0 +1,114 @@
+/* ==========================================================================
+   PÁGINA MOT DU PRÉSIDENT - EFECTO MODELO (FLOAT & ENVOLVENTE)
+   ========================================================================== */
+
+.president-page {
+    padding: 60px 0 100px 0;
+    background-color: #e8f0e8; /* Verde claro institucional */
+    min-height: calc(100vh - 200px);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* Título de la página */
+.president-page-title {
+    font-size: 2.8rem;
+    color: #142f0a;
+    font-weight: 800;
+    margin-bottom: 35px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.president-page-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 4px;
+    background-color: #f5c038; /* Detalle dorado */
+}
+
+/* Contenedor principal sin Flexbox para permitir el flujo envolvente */
+.president-content-wrapper {
+    width: 100%;
+    color: #222222;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+/* IMAGEN FLOTANTE A LA DERECHA (Con tamaño reducido) */
+.president-image-container {
+    float: right;
+    width: 380px; /* Ancho controlado de la imagen */
+    margin-left: 40px; /* Separa el texto de la izquierda */
+    margin-bottom: 25px; /* Separa el texto que pasa por debajo */
+}
+
+.president-image-container img {
+    width: 70%;
+    height: auto;
+    max-height: 420px; /* Reducida para que el texto continúe abajo */
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* Párrafos del texto */
+.president-content-wrapper p {
+    margin-bottom: 20px;
+}
+
+.president-content-wrapper .lead-paragraph {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #142f0a;
+}
+
+/* Firma al final (Limpia el float anterior para quedar alineada) */
+.president-signature {
+    clear: both; /* Asegura que la firma siempre quede abajo de todo */
+    padding-top: 25px;
+    margin-top: 20px;
+    border-top: 1px solid rgba(20, 47, 10, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+.signature-name {
+    font-weight: 800;
+    font-size: 1.25rem;
+    color: #142f0a;
+}
+
+.signature-title {
+    font-size: 0.95rem;
+    color: #19641c;
+    font-weight: 600;
+}
+
+/* ==========================================
+   RESPONSIVO (Móviles y Tablets)
+   ========================================== */
+@media (max-width: 850px) {
+    .president-image-container {
+        float: none;
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 30px;
+    }
+
+    .president-image-container img {
+        max-height: 380px;
+    }
+
+    .president-content-wrapper {
+        text-align: left;
+    }
+}
