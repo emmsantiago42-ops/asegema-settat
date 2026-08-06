@@ -6,7 +6,7 @@ async function cargarNoticias() {
     const container = document.getElementById('noticias-container');
 
     try {
-        const response = await fetch('JSON/noticias.json');
+        const response = await fetch('JSON/noticias.json?v=${Dat.now}');
         if (!response.ok) {
             throw new Error(`Error HTTP: ${response.status}`);
         }
