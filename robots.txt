@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://emmsantiago42-ops.github.io/asegema-settat/sitemap.xml
