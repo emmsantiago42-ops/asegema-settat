@@ -304,3 +304,99 @@ main {
         line-height: 1.65;
     }
 }
+
+/* ==========================================
+   DISEÑO RESPONSIVO (Página de Noticia Detalle)
+   ========================================== */
+
+/* Tabletas (pantallas de menos de 992px) */
+@media (max-width: 992px) {
+  .noticia-hero {
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .noticia-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .noticia-detalle-container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+}
+
+/* Teléfonos móviles (pantallas de menos de 600px) */
+@media (max-width: 600px) {
+  /* Encabezado Principal / Hero */
+  .noticia-hero {
+    padding: 25px 15px;
+    text-align: left;
+  }
+
+  .noticia-hero h1 {
+    font-size: 1.35rem;
+    line-height: 1.3;
+  }
+
+  .hero-meta {
+    font-size: 0.85rem;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 10px;
+  }
+
+  /* Contenedor Principal */
+  .page-noticia-wrapper {
+    padding: 10px;
+  }
+
+  .noticia-detalle-container {
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .noticia-main-content {
+    padding: 15px;
+    box-sizing: border-box;
+  }
+
+  /* Imagen de la Noticia */
+  .detalle-imagen-box {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .detalle-imagen-box img {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  /* Cuerpo del Texto y Enlaces */
+  .cuerpo-texto {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    word-wrap: break-word; /* Evita que URLs largas desborden la pantalla */
+  }
+
+  .cuerpo-texto a {
+    display: inline-block;
+    max-width: 100%;
+    word-break: break-all; /* Ajusta enlaces largos de Drive a la pantalla */
+  }
+
+  /* Adaptación de Botón Externo (si se renderiza como .btn) */
+  .cuerpo-texto .btn,
+  .cuerpo-texto a.btn-enlace-externo {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    margin-top: 15px;
+    box-sizing: border-box;
+  }
+}
