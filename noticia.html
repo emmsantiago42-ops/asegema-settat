@@ -3,14 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Noticias | ASEGEMA Settat</title>
-    
-    <!-- CSS Global -->
+    <title>Noticia | ASEGEMA Settat</title>
     <link rel="stylesheet" href="css/styles.css">
-    <!-- CSS Exclusivo para la página del Presidente -->
     <link rel="stylesheet" href="css/noticias.css">
-    
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
@@ -25,7 +20,7 @@
                     <li><a href="index.html">INICIO</a></li>
                     <li><a href="bureau.html">BUREAU</a></li>
                     <li><a href="membres.html">PRESENTACIÓN</a></li>
-                    <li><a href="#actualidad" class="active">NOTICIAS</a></li>
+                    <li><a href="noticias.html">NOTICIAS</a></li>
                     <li><a href="#contacto">CONTACTO</a></li>
                 </ul>
             </nav>
@@ -51,15 +46,33 @@
             </div>
         </div>
     </div>
+    </header>
+    <header class="noticia-hero">
+        <div class="hero-content">
+            <h1 id="detalle-titulo">Cargando...</h1>
+            <div class="hero-meta">
+                <span id="detalle-fecha">--</span>
+                <span class="separator">|</span>
+                <span>⏱ 1 min de lectura</span>
+            </div>
+        </div>
+    </header>
+    <main class="page-noticia-wrapper">
+        <div class="noticia-detalle-container">
+            <article class="noticia-main-content">
+                <!-- Imagen Principal -->
+                <div class="detalle-imagen-box">
+                    <img id="detalle-imagen" src="" alt="Illustration">
+                </div>
 
-</header>
-
-<section id="noticias">
-    <h1>Últimas Noticias</h1>
-    <div id="noticias-container" class="noticias-grid"></div>
-</section>
-
-<footer id="contacto" class="site-footer">
+                <!-- Cuerpo completo -->
+                <div id="detalle-cuerpo" class="cuerpo-texto">
+                    <!-- Se rellena dinámicamente -->
+                </div>
+            </article>
+        </div>
+    </main>
+    <footer id="contacto" class="site-footer">
     <div class="container footer-container">
         
         <!-- Lado Izquierdo -->
@@ -98,6 +111,7 @@
 
     </div>
 </footer>
-<script src="JS/noticias.js"></script>
+
+    <script src="JS/noticia-detalle.js"></script>
 </body>
 </html>

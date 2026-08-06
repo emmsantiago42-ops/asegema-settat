@@ -54,6 +54,9 @@
         </div>
     </div>
 
+    <!-- BANDA DE NOTICIAS DESLIZANTES (TICKER) -->
+
+
 </header>
 
     <!-- Sección Inicio / Hero -->
@@ -100,6 +103,21 @@
 
 <!-- Sección Mensaje de la Presidencia -->
 <section id="mot-president" class="container">
+    <div class="news-ticker-bar">
+    <div class="ticker-title">Noticias</div>
+    
+    <div class="ticker-viewport">
+        <div class="ticker-track" id="ticker-track">
+            <!-- Cargado dinámicamente desde JS -->
+        </div>
+    </div>
+
+    <div class="ticker-controls">
+        <button id="ticker-prev" class="ticker-btn" aria-label="Anterior">❮</button>
+        <button id="ticker-pause" class="ticker-btn" aria-label="Pausar/Reproducir">❚❚</button>
+        <button id="ticker-next" class="ticker-btn" aria-label="Siguiente">❯</button>
+    </div>
+</div>
     <div class="quote-card">
         
         <!-- Comilla de apertura arriba a la izquierda -->
@@ -133,6 +151,19 @@
         <!-- Comilla de cierre abajo a la derecha -->
         <div class="quote-icon bottom-quote">”</div>
 
+    </div>
+
+    <!-- TARJETA BIBLIOTECA VIRTUAL (index.html) -->
+    <div class="quote-card">
+        <h2>📋 Servicios</h2>
+    <a href="noticia.html?id=2" class="card-servicio-link">
+    <div class="card-servicio-icon">
+        <img src="images/ASEGEMA Settat.jpeg" alt="Biblioteca Virtual ASEGEMA">
+    </div>
+    <div class="card-servicio-text">
+        <span>BIBLIOTECA VIRTUAL</span>
+    </div>
+    </a>
     </div>
 </section>
 
@@ -212,6 +243,13 @@
             <div class="icon-avatar">
                     <img src="images/ASEGEMA Settat.jpeg" alt="Logo ASEGEMA Settat">
             </div>
+            <br>
+            <!-- CONTADOR DE VISITAS -->
+            <div class="visitas-box">
+                <span class="visitas-icon">👁️</span>
+                <span class="visitas-label">Visitas:</span>
+                <span id="contador-visitas" class="visitas-numero">--</span>
+            </div>
             
         </div>
 
@@ -241,5 +279,6 @@
 </footer>
 <!-- CORRECTO (JS en mayúsculas): -->
 <script src="JS/main.js"></script>
+<script src="JS/ticker.js"></script>
 </body>
 </html>

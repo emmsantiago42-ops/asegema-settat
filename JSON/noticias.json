@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "titulo": "Lanzamiento oficial de la pagina web de ASEGEMA-Settat",
+    "fecha": "2026-08-06",
+    "cuerpo": "🌐 ¡Ya es oficial!\n\nCon mucha ilusión anunciamos el lanzamiento de la página web oficial de ASEGEMA Settat. A partir de hoy 06/08/2026, este será nuestro espacio digital para mantener informada a toda nuestra comunidad.\n\nTe invitamos a explorar la página, conocer más sobre nuestra asociación y seguir de cerca cada una de nuestras actividades.\n\nBienvenidos a la nueva ventana digital de ASEGEMA Settat. Seguimos avanzando, innovando y construyendo una comunidad cada vez más unida. Este es un paso más hacia una ASEGEMA más cercana, moderna y accesible para todos.\n\n¡Gracias por formar parte de este proyecto!",
+    "imagen": "images/ASEGEMA Settat.jpeg",
+    "categoria": "General"
+  },
+  {
+    "id": 2,
+    "titulo": "La Biblioteca Virtual de ASEGEMA Settat ya está disponible para toda la comunidad",
+    "fecha": "2026-08-06",
+    "cuerpo": "Se informa a todos los estudiantes y estagiarios miembros de la comunidad de ASEGEMA Settat que ya pueden acceder a las diferentes herramientas informativas y recursos educativos digitales de la biblioteca virtual.\n\nPara consultar el catálogo y hacer uso de las plataformas digitales disponibles, puedes ingresar a través del siguiente enlace directo:\n\n<a href=\"https://drive.google.com/drive/folders/16ljbFCLik55V9kSwl557eeC4S_ntgEfo?usp=drive_link\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn-enlace-externo\">Acceder a la Biblioteca Virtual ↗</a>",
+    "imagen": "images/ASEGEMA Settat.jpeg",
+    "categoria": "Servicios"
+  }
+]

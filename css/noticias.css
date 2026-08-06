@@ -1,49 +1,306 @@
-/* ==========================================================================
-   SECCIÓN DE NOTICIAS (ESTADO VACÍO)
-   ========================================================================== */
-
-.news-section {
-    background-color: #e8f0e8;
-    color: #142f0a;
-    padding: 70px 0;
-    text-align: center;
+#noticias {
+    width: 100%;
+    padding: 40px 20px;
+    background-color: #b9dab9;
 }
 
-.news-title {
+#noticias h1 {
+    color: #1b4d18; /* Verde bosque profundo */
     font-size: 2.2rem;
     font-weight: 800;
-    color: #142f0a;
-    margin-bottom: 30px;
+    margin: 0 auto 30px auto;
 }
 
-/* Tarjeta del estado vacío */
-.empty-state {
-    max-width: 650px;
+/* Grilla principal de noticias */
+.noticias-grid {
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 45px 25px;
-    background-color: rgba(255, 255, 255, 0.05); /* Fondo verde traslúcido suave */
-    border: 2px dashed rgba(245, 192, 56, 0.5); /* Borde punteado en color dorado */
-    border-radius: 16px;
-    backdrop-filter: blur(5px);
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
 }
 
-.empty-icon {
-    font-size: 3.5rem;
-    color: #f5c038; /* Dorado institucional */
+/* Tarjeta individual */
+.noticia-card {
+    background: linear-gradient(135deg, #f0f7f0 0%, #e2ede2 50%, #d8e6d8 100%);
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(25, 100, 28, 0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #eef2f6;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.noticia-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Encabezado con Imagen y Badge */
+.card-header {
+    position: relative;
+    width: 100%;
+    height: 190px;
+    overflow: hidden;
+    background-color: #fafcfb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #e8f0e8;
+}
+
+.card-header img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Muestra la imagen completa sin recortar ningún borde */
+    padding: 16px;       /* Espaciado alrededor para que no toque los bordes */
+    box-sizing: border-box;
+}
+
+.badge {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: linear-gradient(135deg, #f0f7f0 0%, #e2ede2 50%, #d8e6d8 100%);
+    color: #19641c; /* Verde medio de la marca */
+    font-size: 11px;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    letter-spacing: 0.5px;
+    border: 1px solid #d4e6d4;
+}
+
+/* Cuerpo de la tarjeta */
+.card-body {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.fecha {
+    color: #379332;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.titulo {
+    color: #142f0a;
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: 700;
     margin-bottom: 20px;
 }
 
-.empty-state h3 {
-    font-size: 1.4rem;
+.btn-leer {
+    margin-top: auto;
+    color: #19641c; /* Verde acento interactivo */
     font-weight: 700;
-    color: #142f0a;
-    margin-bottom: 12px;
+    font-size: 14px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
 }
 
-.empty-state p {
-    color: #142f0a;
-    font-size: 1rem;
-    line-height: 1.6;
-    max-width: 500px;
+.btn-leer:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================
+   PÁGINA DE DETALLE DE NOTICIA
+   ========================================== */
+
+/* Hero Banner Oscuro */
+.noticia-hero {
+    background: linear-gradient(135deg, #142f0a 0%, #19641c 100%);
+    color: white;
+    padding: 60px 20px 80px 20px;
+    text-align: left;
+}
+
+.hero-content {
+    max-width: 900px;
     margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 2.2rem;
+    line-height: 1.3;
+    margin-bottom: 15px;
+    color: #ffffff !important;
+}
+
+.hero-meta {
+    font-size: 14px;
+    opacity: 0.9;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.hero-meta .separator {
+    opacity: 0.5;
+}
+
+.page-noticia-wrapper {
+    width: 100%;
+    background-color: #b9dab9; /* Verde claro de fondo */
+    padding-bottom: 60px;
+    box-sizing: border-box;
+}
+
+/* Tarjeta contenedora flotante */
+.noticia-detalle-container {
+    width: 760px;
+    margin: -40px auto 0 auto;
+    padding: 0 20px;
+    background-color: transparent;
+}
+main {
+    width: 100%;
+    background-color: #b9dab9;/* O la tonalidad de verde claro que estés usando */
+    padding-bottom: 60px;
+}
+
+.noticia-main-content {
+    background: #e6f8e6;
+    border-radius: 16px;
+    padding: 28px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid #eef2f6;
+}
+
+/* Imagen Principal */
+.detalle-imagen-box {
+    width: 100%;
+    height: 280px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    background-color: #fafcfb; /* Fondo suave para rellenar los bordes */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e8f0e8;
+}
+
+.detalle-imagen-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Muestra la imagen completa sin recortar los bordes */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Bloque Destacado (Franja verde a la izquierda) */
+.destacado-box {
+    border-left: 4px solid #379332;
+    background: #f4f8f4;
+    padding: 20px 25px;
+    margin-bottom: 30px;
+    font-style: italic;
+    color: #19641c;
+    line-height: 1.6;
+    font-size: 1.05rem;
+    border-radius: 0 8px 8px 0;
+}
+
+/* Cuerpo del texto */
+.cuerpo-texto {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #2c3e50;
+}
+
+.cuerpo-texto p {
+    margin-bottom: 16px;
+}
+
+.cuerpo-texto p:last-child {
+    margin-bottom: 0;
+}
+
+.cuerpo-texto a {
+    color: #19641c; /* Verde acento */
+    font-weight: 600;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+.cuerpo-texto a:hover {
+    color: #0b330d; /* Verde más oscuro al pasar el cursor */
+}
+
+/* 5. Adaptación para tabletas y móviles */
+@media (max-width: 992px) {
+    .noticias-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .noticia-main-content {
+        padding: 28px;
+    }
+
+    .detalle-imagen-box {
+        max-height: 320px;
+    }
+}
+
+@media (max-width: 650px) {
+    .noticias-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .noticia-hero {
+        padding: 40px 15px 55px 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.5rem;
+        line-height: 1.35;
+    }
+
+    .hero-meta {
+        font-size: 13px;
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .noticia-detalle-container {
+        margin-top: -25px;
+        padding: 0 12px;
+    }
+
+    .noticia-main-content {
+        padding: 20px 16px;
+        border-radius: 12px;
+    }
+
+    .detalle-imagen-box {
+        max-height: 230px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+    }
+
+    .destacado-box {
+        padding: 15px;
+        font-size: 0.95rem;
+        margin-bottom: 20px;
+    }
+
+    .cuerpo-texto {
+        font-size: 15px;
+        line-height: 1.65;
+    }
 }
